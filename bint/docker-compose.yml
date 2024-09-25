@@ -12,9 +12,11 @@ services:
       - .:/app
     depends_on:
       - mongo
+    image: node:22.8.0 # Versión más reciente de Node.js
 
   mongo:
     image: mongo:latest
     container_name: mongo
     ports:
       - "27017:27017"
+
